@@ -1,4 +1,4 @@
-{% set version = "0.4.3" %}
+{% set version = "0.4.4" %}
 
 package:
   name: pyduktape2
@@ -7,12 +7,12 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/p/pyduktape2/pyduktape2-{{ version }}.tar.gz
-    sha256: 4444c3c103fd18988b17d22822ac77a8a4c7e602a3122ed3fc93a48732d4f7b2
+    sha256: be03478901e28ceefc54eba02c03395152d253663831f83e94b2181e5d5b904c
     patches:
       - 000-no-cython-runtime.patch
   - folder: src
     url: https://github.com/phith0n/pyduktape2/archive/refs/tags/{{ version }}.tar.gz
-    sha256: ca4ab4cb216e0e5082f70ec8deccddd77203a1542f71fdcf6a03acbd47629226
+    sha256: 1408403200c8ff55cdc4e757363243f1727868012e29b7516c8b81657e168884
     patches:
       - 001-no-import-tests.patch
 
@@ -25,10 +25,10 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython <3                              # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
-    - cython
+    - cython <3
     - pip
     - python
   run:
