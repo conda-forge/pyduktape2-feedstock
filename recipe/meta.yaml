@@ -12,8 +12,6 @@ source:
   - folder: dist
     url: https://pypi.org/packages/source/p/pyduktape2/pyduktape2-{{ version }}.tar.gz
     sha256: c84674e202ef4901bca8f6ea8b40197259bf44656167a1106ef076a491421bec
-    patches:
-      - 000-no-cython-runtime.patch
   - folder: src
     url: https://github.com/phith0n/pyduktape2/archive/refs/tags/{{ test_version }}.tar.gz
     sha256: 1408403200c8ff55cdc4e757363243f1727868012e29b7516c8b81657e168884
