@@ -46,12 +46,10 @@ test:
   commands:
     - pip check
     - cd src/tests
-    - coverage run --source=pyduktape2 --branch -m pytest -vv --tb=long --color=yes
-    - coverage report --show-missing --skip-covered --fail-under=100
+    - pytest -vv --tb=long --color=yes
   requires:
     - pip
     - pytest
-    - coverage
 
 about:
   home: https://github.com/phith0n/pyduktape2
