@@ -35,6 +35,7 @@ requirements:
     - cython <3
     - pip
     - python
+    - setuptools
   run:
     - python
 
