@@ -19,7 +19,7 @@ source:
       - 001-no-import-tests.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win or osx) and py == 311]
   script: cd dist && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
