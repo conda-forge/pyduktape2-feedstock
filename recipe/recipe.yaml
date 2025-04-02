@@ -20,6 +20,7 @@ source:
 
 build:
   number: 0
+  skip: (win or osx) and match(python, "3.11.*")
   script:
     - cd src
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
