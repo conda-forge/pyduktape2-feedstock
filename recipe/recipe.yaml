@@ -19,7 +19,7 @@ source:
       - 001-no-import-tests.patch
 
 build:
-  number: 0
+  number: 1
   skip: (win or osx) and match(python, "3.11.*")
   script:
     - cd src
